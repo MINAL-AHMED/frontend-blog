@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "./components/Navbar";
@@ -26,7 +27,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main className="max-w-3xl mx-auto px-4">{children}</main>
+          <main className="max-w-3xl mx-auto px-4">
+            {children}
+            <Analytics />
+          </main>
         </ThemeProvider>
       </body>
     </html>
