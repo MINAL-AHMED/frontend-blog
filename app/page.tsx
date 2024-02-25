@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { blogCard } from "./lib/interface";
 import { client, urlFor } from "./lib/sanity";
-
+export const revalidate = 30; // revalidate at most 30 seconds
 async function getData() {
   const query = `*[_type =='blog'] | order(_createdAt desc){
     title,
