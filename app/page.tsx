@@ -57,10 +57,10 @@ export default async function Home() {
                 </Link>
               </Button>
             </div>
-            <div className="flex justify-center items-center animate-fadeInUp">
+            <div className="flex justify-center items-center animate-fadeInUp pt-4">
               <img
                 alt="Hero"
-                className="md:block grayscale-1 aspect-video overflow-hidden rounded-xl object-bottom"
+                className="md:block  grayscale-1 aspect-video overflow-hidden rounded-xl object-bottom"
                 height="500"
                 src="/assets/images/hero-image.jpg"
                 width="500"
