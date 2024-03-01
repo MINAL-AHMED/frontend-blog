@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
@@ -21,9 +22,12 @@ async function getData() {
 const Blog = async () => {
   const data: blogCard[] = await getData();
   return (
-    <div className="grid grid-cols-1  md:grid-cols-2 mt-5 gap-5">
+    <div className="grid grid-cols-1  md:grid-cols-2 mt-32 gap-5 max-w-3xl mx-auto px-4">
       {data.map((post, idx) => (
-        <Card key={idx}>
+        <Card
+          key={idx}
+          className="scale-100 hover:scale-105 ease-in duration-500"
+        >
           <Image
             src={urlFor(post.titleImage).url()}
             alt="image"
