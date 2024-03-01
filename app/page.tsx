@@ -34,27 +34,33 @@ export default async function Home() {
   return (
     <>
       {/* Hero section */}
-      <section className="w-full h-[85vh] md:h-screen  pt-20 md:pt-28 lg:pt-36 bg-neutral-100 dark:bg-neutral-900">
+      <section className="w-full h-[100vh] md:h-screen  pt-20 md:pt-28 lg:pt-36 bg-neutral-100 dark:bg-neutral-900">
         <div className="container space-y-10 xl:space-y-16 md:pt-20">
           <div className="grid grid-cols-1 max-w-5xl items-center gap-2 px-8 mx-auto md:grid-cols-2 md:gap-6">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem] pt-8  animate-fadeInUp ">
                 Let's Explore the World
               </h1>
-              <p className="text-gray-500 md:text-xl dark:text-gray-400 py-4">
+              <p className="text-gray-500 md:text-xl dark:text-gray-400 py-4 animate-fadeInUp">
                 Inspiring travel stories and experiences from around the globe.
                 Embark on a journey of discovery.
               </p>
-              <Link href="#blog">
-                <Button className="p-6 text-lg font-semibold bg-neutral-700 dark:bg-neutral-50 dark:hover:bg-neutral-300 hover:bg-neutral-800 transition">
-                  Read Blog <span className="px-2 text-2xl">⬇</span>
-                </Button>
-              </Link>
+
+              <Button
+                size="sm"
+                asChild
+                className="w-full  p-6 text-lg sm:w-fit font-semibold bg-neutral-700 dark:bg-neutral-50 dark:hover:bg-neutral-300 hover:bg-neutral-800 transition animate-fadeInUp"
+              >
+                <Link href="#blog">
+                  Read Blog{" "}
+                  <span className="px-2 text-2xl animate-fadeInUp">⬇</span>
+                </Link>
+              </Button>
             </div>
             <div className="flex justify-center items-center animate-fadeInUp">
               <img
                 alt="Hero"
-                className="hidden md:block grayscale-1 aspect-video overflow-hidden rounded-xl object-bottom"
+                className="md:block grayscale-1 aspect-video overflow-hidden rounded-xl object-bottom"
                 height="500"
                 src="/assets/images/hero-image.jpg"
                 width="500"
