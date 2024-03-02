@@ -1,8 +1,9 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
-
+import { TypeAnimation } from "react-type-animation";
 import { blogCard } from "./lib/interface";
 import { client, urlFor } from "./lib/sanity";
 export const revalidate = 30; // revalidate at most 30 seconds
@@ -38,9 +39,30 @@ export default async function Home() {
         <div className="container space-y-10 xl:space-y-16 md:pt-20">
           <div className="grid grid-cols-1 max-w-5xl items-center gap-2 px-8 mx-auto md:grid-cols-2 md:gap-6">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem] pt-8  animate-fadeInUp ">
-                Let's Explore the World
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem] py-8  animate-fadeInUp ">
+                Let's Explore the
               </h1>
+              <TypeAnimation
+                sequence={[
+                  // Same substring at the start will only be typed out once, initially
+                  "World",
+                  1000,
+                  "Country",
+                  1000,
+                  "City",
+                  1000,
+                  "Travel",
+                  1000,
+                  "Story",
+                  1000,
+                  "Experience",
+                ]}
+                wrapper="span"
+                speed={50}
+                // style={{ fontSize: "2em", display: "inline-block" }}
+                className="text-1xl font-semibold  md:text-3xl xl:text-[3.4rem] 2xl:text-[3.75rem] text-primary"
+                repeat={Infinity}
+              />
               <p className="text-gray-500 md:text-xl dark:text-gray-400 py-4 animate-fadeInUp">
                 Inspiring travel stories and experiences from around the globe.
                 Embark on a journey of discovery.
