@@ -26,7 +26,7 @@ export default async function BlogArticle({
   const data: fullBlog = await getData(params.slug);
 
   return (
-    <div className="mt-8 max-w-3xl mx-auto px-4">
+    <div className="mt-16 max-w-3xl mx-auto px-4 py-14 ">
       <h1>
         <span className="block text-base text-center text-primary font-semibold tracking-wide uppercase">
           TOM - Blog

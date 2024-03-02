@@ -35,10 +35,10 @@ export default async function Home() {
   return (
     <>
       {/* Hero section */}
-      <section className="w-full h-[100vh] md:h-screen  pt-20 md:pt-24 lg:pt-28 bg-neutral-100 dark:bg-neutral-900">
+      <section className="w-full pt-16 md:py-10 bg-neutral-100 dark:bg-neutral-900">
         <div className="container space-y-10 xl:space-y-16 md:pt-20">
-          <div className="grid grid-cols-1 max-w-5xl items-center gap-2 px-8 mx-auto md:grid-cols-2 md:gap-6">
-            <div className="space-y-2">
+          <div className="grid mt-4 pb-10 grid-cols-1 max-w-5xl items-center gap-3 px-8 mx-auto md:grid-cols-2 md:gap-6">
+            <div className="w-full grid mt-4 pb-10 grid-cols-1 max-w-5xl items-center gap-3  mx-auto md:grid-cols-1 md:gap-6">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem] py-8  animate-fadeInUp ">
                 Let's Explore the
               </h1>
@@ -56,6 +56,7 @@ export default async function Home() {
                   "Story",
                   1000,
                   "Experience",
+                  1000,
                 ]}
                 wrapper="span"
                 speed={50}
@@ -79,13 +80,13 @@ export default async function Home() {
                 </Link>
               </Button>
             </div>
-            <div className="flex justify-center items-center animate-fadeInUp pt-4">
-              <img
+            <div className="flex justify-center items-center animate-fadeInUp pt-4 w-full">
+              <Image
                 alt="Hero"
-                className="md:block  grayscale-1 aspect-video overflow-hidden rounded-xl object-bottom"
-                height="500"
+                className="hidden md:block rounded-lg object-cover w-full"
+                width={500}
+                height={500}
                 src="/assets/images/hero-image.jpg"
-                width="500"
               />
             </div>
           </div>
@@ -94,10 +95,10 @@ export default async function Home() {
       {/* Hero section */}
 
       {/* New Blog section */}
-      <section className="pt-14" id="blog">
+      <section className="py-14" id="blog">
         <div className="flex flex-col items-center text-center md:py-9 ">
-          <h1 className="font-bold text-gray-500 dark:text-gray-200 sm:text-5xl md:text-6xl">
-            New Blog
+          <h1 className="text-2xl font-bold text-primary dark:text-gray-200 sm:text-5xl md:text-6xl">
+            Latest Stories
           </h1>
         </div>
         <div className="grid mt-4 pb-10 grid-cols-1 max-w-5xl items-center gap-3 px-8 mx-auto md:grid-cols-3 md:gap-6">
