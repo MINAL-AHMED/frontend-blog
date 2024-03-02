@@ -34,7 +34,7 @@ export default async function Home() {
   return (
     <>
       {/* Hero section */}
-      <section className="w-full h-[100vh] md:h-screen  pt-20 md:pt-28 lg:pt-36 bg-neutral-100 dark:bg-neutral-900">
+      <section className="w-full h-[100vh] md:h-screen  pt-20 md:pt-24 lg:pt-28 bg-neutral-100 dark:bg-neutral-900">
         <div className="container space-y-10 xl:space-y-16 md:pt-20">
           <div className="grid grid-cols-1 max-w-5xl items-center gap-2 px-8 mx-auto md:grid-cols-2 md:gap-6">
             <div className="space-y-2">
@@ -78,7 +78,7 @@ export default async function Home() {
             New Blog
           </h1>
         </div>
-        <div className="grid mt-4  grid-cols-1 max-w-5xl items-center gap-3 px-8 mx-auto md:grid-cols-3 md:gap-6">
+        <div className="grid mt-4 pb-10 grid-cols-1 max-w-5xl items-center gap-3 px-8 mx-auto md:grid-cols-3 md:gap-6">
           {data.map((post, idx) => (
             <Card
               key={idx}
