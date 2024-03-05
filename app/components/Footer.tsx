@@ -30,6 +30,11 @@ const Footer = () => {
               </Link>
             </li>
             <li>
+              <Link href="/blogvideo" className="text-sm hover:text-gray-400">
+                Video
+              </Link>
+            </li>
+            <li>
               <Link href="/about" className="text-sm hover:text-gray-400">
                 About
               </Link>
