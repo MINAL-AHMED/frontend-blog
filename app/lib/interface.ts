@@ -1,4 +1,6 @@
 export interface blogCard {
+  videoUrl(videoUrl: any): unknown;
+  description: string;
   title: string;
   smallDescription: string;
   currentSlug: string;
