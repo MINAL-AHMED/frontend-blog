@@ -15,4 +15,8 @@ export const headerLinks = [
     label: "About",
     route: "/about",
   },
+  {
+    label: "Contact Us",
+    route: "/contact",
+  },
 ];
