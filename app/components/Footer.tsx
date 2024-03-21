@@ -1,49 +1,64 @@
-// components/Footer.js
-
 import Link from "next/link";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
-
-const Footer = () => {
+function Footer() {
   return (
-    <footer className="w-full pt-20 md:pt-24 lg:pt-28 bg-neutral-100 dark:bg-neutral-900 border-t">
-      <div className="grid grid-cols-1 max-w-5xl items-center gap-2 px-8 mx-auto md:grid-cols-3 md:gap-6">
-        {/* About Section */}
+    <footer className="py-12 bg-neutral-100 dark:bg-neutral-900 ">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4 sm:px-6 lg:px-8">
         <div>
-          <h2 className="text-2xl font-bold mb-4">About Us</h2>
-          <p className="text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            cursus convallis dui vel pulvinar.
+          <h2 className=" text-lg font-semibold mb-4">About Us</h2>
+          <p className="mb-4">
+            Join our vibrant community of explorers as we share our love for
+            immersive travel experiences, hidden gems, and cultural encounters
+            that leave a lasting impact.
           </p>
         </div>
-        {/* Quick Links Section */}
         <div>
-          <h2 className="text-2xl font-bold mb-4">Quick Links</h2>
-          <ul className="space-y-2">
+          <h2 className=" text-lg font-semibold mb-4">Quick Links</h2>
+          <ul>
             <li>
-              <Link href="/" className="text-sm hover:text-gray-400">
+              <Link
+                href="/"
+                className="hover:text-neutral-400 transition-colors duration-300"
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/blog" className="text-sm hover:text-gray-400">
+              <Link
+                href="/blog"
+                className="hover:text-neutral-400 transition-colors duration-300"
+              >
                 Blog
               </Link>
             </li>
             <li>
-              <Link href="/blogvideo" className="text-sm hover:text-gray-400">
+              <Link
+                href="/video"
+                className="hover:text-neutral-400 transition-colors duration-300"
+              >
                 Video
               </Link>
             </li>
             <li>
-              <Link href="/about" className="text-sm hover:text-gray-400">
+              <Link
+                href="/about"
+                className="hover:text-neutral-400 transition-colors duration-300"
+              >
                 About
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="contact"
+                className="hover:text-neutral-400 transition-colors duration-300"
+              >
+                Contact Us
               </Link>
             </li>
           </ul>
         </div>
-        {/* Social Media Section */}
-        <div className="flex flex-col items-center md:items-start">
-          <h2 className="text-2xl font-bold mb-4">Follow Us</h2>
+        <div>
+          <h2 className=" text-lg font-semibold mb-4">Follow Us</h2>
           <div className="flex space-x-4">
             <a
               href="#"
@@ -75,14 +90,19 @@ const Footer = () => {
             </a>
           </div>
         </div>
+        <div>
+          <h2 className=" text-lg font-semibold mb-4">Contact Us</h2>
+          <p>Dhaka, Bangladesh</p>
+          <p>Dhaka 10001</p>
+          <p>Email: info@blog.com</p>
+          <p>Phone: (017) 456-7890</p>
+        </div>
       </div>
-      <div className="mt-8 text-center border-t">
-        <p className="text-sm py-4">
-          &copy; {new Date().getFullYear()} Your Tom. All Rights Reserved.
-        </p>
-      </div>
+      <p className="text-center text-xs pt-8">
+        © 2024 Tom Blog. All rights reserved.
+      </p>
     </footer>
   );
-};
+}
 
 export default Footer;
